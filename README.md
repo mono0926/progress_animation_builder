@@ -2,7 +2,7 @@
 
 ![gif](gif/gif.gif)
 
-ProgressAnimationBuilder
+ProgressAnimationBuilder passes Animation<double> according to value(0.0-1.0).
 
 ## Usage
 
