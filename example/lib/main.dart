@@ -4,17 +4,17 @@ import 'package:progress_animation_builder/progress_animation_builder.dart';
 void main() => runApp(const App());
 
 class App extends StatelessWidget {
-  const App({Key key}) : super(key: key);
+  const App({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const _Home(),
+    return const MaterialApp(
+      home: _Home(),
     );
   }
 }
 
 class _Home extends StatefulWidget {
-  const _Home({Key key}) : super(key: key);
+  const _Home();
 
   @override
   _HomeState createState() => _HomeState();
@@ -31,7 +31,7 @@ class _HomeState extends State<_Home> {
         children: [
           ProgressAnimationBuilder(
             value: _isInitial ? 0 : 1,
-            duration: Duration(milliseconds: 1000),
+            duration: const Duration(milliseconds: 1000),
             curve: Curves.slowMiddle,
             builder: (context, animation) {
               return Column(
@@ -58,7 +58,7 @@ class _HomeState extends State<_Home> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => setState(() => _isInitial = !_isInitial),
-        child: Icon(Icons.refresh),
+        child: const Icon(Icons.refresh),
       ),
     );
   }

@@ -7,20 +7,19 @@ typedef ProgressBuilder<T> = Widget Function(
 
 class ProgressAnimationBuilder extends StatefulWidget {
   const ProgressAnimationBuilder({
-    Key key,
-    @required this.builder,
-    @required this.duration,
+    super.key,
+    required this.builder,
+    required this.duration,
     this.value = 0,
     this.curve,
     this.child,
-  })  : assert(value >= 0 && value <= 1),
-        super(key: key);
+  }) : assert(value >= 0 && value <= 1);
 
   final ProgressBuilder builder;
-  final Widget child;
+  final Widget? child;
   final double value;
   final Duration duration;
-  final Curve curve;
+  final Curve? curve;
 
   @override
   _ProgressAnimationBuilderState createState() =>
@@ -29,7 +28,7 @@ class ProgressAnimationBuilder extends StatefulWidget {
 
 class _ProgressAnimationBuilderState extends State<ProgressAnimationBuilder>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late final AnimationController _controller;
 
   @override
   void initState() {
@@ -58,11 +57,12 @@ class _ProgressAnimationBuilderState extends State<ProgressAnimationBuilder>
         ..duration = duration
         ..animateTo(widget.value);
     }
+    final curve = widget.curve;
     return widget.builder(
       context,
-      widget.curve == null
+      curve == null
           ? _controller
-          : _controller.drive(CurveTween(curve: widget.curve)),
+          : _controller.drive(CurveTween(curve: curve)),
     );
   }
 }
