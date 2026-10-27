@@ -1,10 +1,14 @@
 import 'package:flutter/widgets.dart';
 
+/// Signature for a function that builds a widget given an [Animation] of
+/// progress.
 typedef ProgressBuilder = Widget Function(
   BuildContext context,
   Animation<double> animation,
 );
 
+/// A widget that animates a progress [value] between `0.0` and `1.0` over a
+/// specified [duration] and delegates building to [builder].
 class const ProgressAnimationBuilder({
   super.key,
   required final ProgressBuilder builder,
