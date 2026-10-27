@@ -1,6 +1,6 @@
 name: progress_animation_builder
 description: ProgressAnimationBuilder passes Animation<double> according to value(0.0-1.0).
-version: 3.0.0
+version: 3.0.1
 homepage: https://github.com/mono0926/progress_animation_builder
 environment:
   sdk: ^3.13.0
