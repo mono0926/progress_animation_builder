@@ -1,26 +1,21 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:progress_animation_builder/progress_animation_builder.dart';
 
 void main() => runApp(const App());
 
-class App extends StatelessWidget {
-  const App({super.key});
+class const App({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: _Home(),
-    );
+    return const MaterialApp(home: _Home());
   }
 }
 
-class _Home extends StatefulWidget {
-  const _Home();
-
+class const _Home() extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<_Home> {
+class _HomeState() extends State<_Home> {
   var _isInitial = true;
 
   @override

@@ -1,42 +1,34 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-typedef ProgressBuilder<T> = Widget Function(
+typedef ProgressBuilder = Widget Function(
   BuildContext context,
   Animation<double> animation,
 );
 
-class ProgressAnimationBuilder extends StatefulWidget {
-  const ProgressAnimationBuilder({
-    super.key,
-    required this.builder,
-    required this.duration,
-    this.value = 0,
-    this.curve,
-    this.child,
-  }) : assert(value >= 0 && value <= 1);
-
-  final ProgressBuilder builder;
-  final Widget? child;
-  final double value;
-  final Duration duration;
-  final Curve? curve;
+class const ProgressAnimationBuilder({
+  super.key,
+  required final ProgressBuilder builder,
+  required final Duration duration,
+  final double value = 0,
+  final Curve? curve,
+  final Widget? child,
+}) extends StatefulWidget {
+  this : assert(value >= 0 && value <= 1);
 
   @override
-  _ProgressAnimationBuilderState createState() =>
+  State<ProgressAnimationBuilder> createState() =>
       _ProgressAnimationBuilderState();
 }
 
-class _ProgressAnimationBuilderState extends State<ProgressAnimationBuilder>
+class _ProgressAnimationBuilderState()
+    extends State<ProgressAnimationBuilder>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: widget.duration,
-    );
+    _controller = AnimationController(vsync: this, duration: widget.duration);
   }
 
   @override
@@ -50,7 +42,8 @@ class _ProgressAnimationBuilderState extends State<ProgressAnimationBuilder>
     final diff = (_controller.value - widget.value).abs();
     if (diff != 0) {
       final duration = Duration(
-        milliseconds: widget.duration.inMilliseconds ~/
+        milliseconds:
+            widget.duration.inMilliseconds ~/
             (_controller.value - widget.value).abs(),
       );
       _controller
@@ -60,9 +53,7 @@ class _ProgressAnimationBuilderState extends State<ProgressAnimationBuilder>
     final curve = widget.curve;
     return widget.builder(
       context,
-      curve == null
-          ? _controller
-          : _controller.drive(CurveTween(curve: curve)),
+      curve == null ? _controller : _controller.drive(CurveTween(curve: curve)),
     );
   }
 }

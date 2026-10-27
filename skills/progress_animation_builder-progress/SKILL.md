@@ -26,7 +26,7 @@ description: >-
 ### 1. Animating AnimatedIcon (Play / Pause)
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:progress_animation_builder/progress_animation_builder.dart';
 
 class PlayPauseButton extends StatefulWidget {
@@ -63,7 +63,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton> {
 ### 2. Smooth Custom Progress Bar
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:progress_animation_builder/progress_animation_builder.dart';
 
 class SmoothProgressBar extends StatelessWidget {
