@@ -1,3 +1,9 @@
+## 3.1.0 - 2026-11-12
+
+### Enhancements
+- Support Flutter 3.50 and Dart 3.14 (require Dart `^3.14.0` and Flutter `>=3.50.0`)
+- Update `pedantic_mono` to `^1.39.0` and upgrade example dependencies
+
 ## 3.0.1 - 2026-10-27
 
 ### Documentation
