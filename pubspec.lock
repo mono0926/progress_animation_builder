@@ -99,6 +99,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  listen:
+    dependency: transitive
+    description:
+      name: listen
+      sha256: "47501a08016a43fcad79252439d723f50f14f88fa7bfd8a177e0a417e5c9e1f2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   matcher:
     dependency: transitive
     description:
@@ -135,10 +143,10 @@ packages:
     dependency: "direct dev"
     description:
       name: pedantic_mono
-      sha256: "66fa574c80ab5e603489e2b632bb3f7352e6059300cfc40210f038be42f26623"
+      sha256: b99ee1cceba6489b5c9e3d6aae046f13fc069b746e815e15bf404236a412f25b
       url: "https://pub.dev"
     source: hosted
-    version: "1.38.1"
+    version: "1.39.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -188,10 +196,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-      sha256: "2a122cbe059f8b610d3a5415f42e255b6c17b1f21eee1d960f31080237fb4f11"
+      sha256: "0a10344e901e5b2e63819567951cb6a06673ed6b84f40462188ff5a0c41f371f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.12"
+    version: "0.7.14"
   vector_math:
     dependency: transitive
     description:
@@ -209,5 +217,5 @@ packages:
     source: hosted
     version: "15.4.0"
 sdks:
-  dart: ">=3.13.0 <4.0.0"
-  flutter: ">=3.47.0"
+  dart: ">=3.14.0 <4.0.0"
+  flutter: ">=3.50.0"

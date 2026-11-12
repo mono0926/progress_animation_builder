@@ -3,13 +3,13 @@ description: ProgressAnimationBuilder passes Animation<double> according to valu
 version: 3.0.1
 homepage: https://github.com/mono0926/progress_animation_builder
 environment:
-  sdk: ^3.13.0
-  flutter: '>=3.47.0'
+  sdk: ^3.14.0
+  flutter: '>=3.50.0'
 dependencies:
   flutter:
     sdk: flutter
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  pedantic_mono: any
+  pedantic_mono: ^1.39.0
 flutter:
